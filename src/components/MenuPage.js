@@ -8,7 +8,7 @@ const MenuPage = (props) => {
 
   return (
     <div>
-      <div id="categories">
+      <main id="categories">
         <div
           onClick={() => {
             setDetails([...Details]);
@@ -17,6 +17,7 @@ const MenuPage = (props) => {
           All
         </div>
         <div
+        id="#filter-btn-1"
           onClick={() => {
             setDetails(Details.filter((dish) => dish.category == "breakfast"));
           }}
@@ -24,6 +25,7 @@ const MenuPage = (props) => {
           Breakfast
         </div>
         <div
+        id="#filter-btn-2"
           onClick={() => {
             setDetails(Details.filter((dish) => dish.category == "lunch"));
           }}
@@ -31,13 +33,14 @@ const MenuPage = (props) => {
           Lunch
         </div>
         <div
+        id="#filter-btn-3"
           onClick={() => {
             setDetails(Details.filter((dish) => dish.category === "shakes"));
           }}
         >
           Shakes
         </div>
-      </div>
+      </main>
       <div id="menu-details">
         {Details &&
           Details.map((obj) => {
