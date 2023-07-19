@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const MenuPage = (props) => {
-  // console.log(props.Details);
-
   const [Details, setDetails] = useState(props.Details);
 
   return (
@@ -17,7 +15,7 @@ const MenuPage = (props) => {
           All
         </div>
         <div
-          id="#filter-btn-1"
+          id="filter-btn-1"
           onClick={() => {
             setDetails(
               props.Details.filter((dish) => dish.category == "breakfast")
@@ -27,7 +25,7 @@ const MenuPage = (props) => {
           Breakfast
         </div>
         <div
-          id="#filter-btn-2"
+          id="filter-btn-2"
           onClick={() => {
             setDetails(
               props.Details.filter((dish) => dish.category == "lunch")
@@ -37,7 +35,7 @@ const MenuPage = (props) => {
           Lunch
         </div>
         <div
-          id="#filter-btn-3"
+          id="filter-btn-3"
           onClick={() => {
             setDetails(
               props.Details.filter((dish) => dish.category === "shakes")
